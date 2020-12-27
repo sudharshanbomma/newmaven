@@ -13,7 +13,7 @@ pipeline{
     
     stage("unit Test"){
       steps{
-        sh '${M2_HOME}/bin/mvn clean test:test'
+        sh '${M2_HOME}/bin/mvn -B -DskipTests clean package'
       }
     }
   }
